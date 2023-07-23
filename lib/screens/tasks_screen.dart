@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+
+class TasksScreen extends StatelessWidget {
+  const TasksScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
+        onPressed: () {},
+        child: const Icon(Icons.add),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.only(
+              top: 64.0,
+              left: 32.0,
+              right: 32.0,
+              bottom: 32.0,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 32.0,
+                  child: Icon(
+                    Icons.list,
+                    size: 32.0,
+                    color: Colors.lightBlueAccent,
+                  ),
+                ),
+                SizedBox(
+                  height: 12.0,
+                ),
+                Text(
+                  'Todoey',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 48.0,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text(
+                  '12 Tasks',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
