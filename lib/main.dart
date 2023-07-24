@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => TaskData(),
       child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: TasksScreen(),
       ),
     );
